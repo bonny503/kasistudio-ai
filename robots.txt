@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://kasistudio-ai.vercel.app/sitemap.xml
