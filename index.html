@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KasiStudio AI | AI Short Film Animation, Generated Reels & Video Studio</title>
-  <meta name="description" content="Watch AI short film animations and generated short reels, try text-to-video, image-to-video, and video background changer, and pay via USDT, USDC, or M-PESA." />
-  <meta name="keywords" content="AI short film animation, generated short reels, AI text to video, AI image to video, video background changer, USDT, USDC, KasiStudio AI" />
+  <title>KasiStudio AI | Animated Cartoons for TikTok & Facebook Reels</title>
+  <meta name="description" content="Animated cartoon short films and 9:16 vertical reels built for TikTok and Facebook Reels, with story-driven film direction, background changer, and USDT/USDC/M-PESA packages." />
+  <meta name="keywords" content="animated cartoon short film, TikTok Reels animation, Facebook Reels cartoon, AI cartoon video, video background changer, USDT, USDC, KasiStudio AI" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="KasiStudio AI | AI Short Film Animation & Generated Short Reels" />
-  <meta property="og:description" content="Explore AI short film animations, vertical generated reels, background changer, and USDT/USDC/M-PESA packages." />
+  <meta property="og:title" content="KasiStudio AI | Animated Cartoons for TikTok & Facebook Reels" />
+  <meta property="og:description" content="Vertical 9:16 animated cartoon shorts for TikTok and Facebook Reels, story direction, background swaps, and USDT/USDC/M-PESA checkout." />
   <meta property="og:type" content="website" />
 
   <script type="application/ld+json">
@@ -117,7 +117,7 @@
     .btn-sm { padding: 7px 12px; font-size: 0.83rem; border-radius: 8px; }
 
     /* HERO */
-    .hero { padding: 54px 0 30px; text-align: center; }
+    .hero { padding: 52px 0 28px; text-align: center; }
     .pill-badge {
       display: inline-flex;
       align-items: center;
@@ -132,13 +132,13 @@
       margin-bottom: 16px;
     }
     h1 {
-      font-size: clamp(2.05rem, 4.8vw, 3.35rem);
+      font-size: clamp(2.05rem, 4.8vw, 3.3rem);
       line-height: 1.12;
       letter-spacing: -0.025em;
       max-width: 860px;
       margin: 0 auto 14px;
     }
-    .hero p { color: var(--muted); max-width: 680px; margin: 0 auto 24px; font-size: 1.03rem; }
+    .hero p { color: var(--muted); max-width: 700px; margin: 0 auto 24px; font-size: 1.02rem; }
     .hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
     section { padding: 44px 0; }
@@ -146,51 +146,64 @@
     .section-head h2 { font-size: 1.7rem; letter-spacing: -0.02em; margin-bottom: 6px; }
     .section-head p { color: var(--muted); }
 
-    /* SHOWCASE: AI SHORT FILM ANIMATION (16:9) & GENERATED SHORT REELS (9:16) */
-    .film-showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 22px;
-    }
-    .reels-showcase-grid {
+    /* TIKTOK & FACEBOOK REELS ANIMATED CARTOON SHOWCASE (9:16 VERTICAL) */
+    .reels-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
-    .media-card {
+    .cartoon-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 18px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 14px;
-      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
     }
-    .player-shell {
+    .reel-shell {
       position: relative;
       width: 100%;
-      border-radius: 12px;
+      aspect-ratio: 9 / 16;
+      max-height: 430px;
+      margin: 0 auto;
+      border-radius: 14px;
       overflow: hidden;
       border: 1px solid var(--border);
-      background: #06080d;
+      background: #070a12;
     }
-    .aspect-16-9 { aspect-ratio: 16 / 9; }
-    .aspect-9-16 { aspect-ratio: 9 / 16; max-height: 410px; margin: 0 auto; }
-
-    .real-video {
+    .cartoon-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .real-mp4-overlay {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      background: #05070c;
+      display: none;
+      z-index: 2;
     }
-    .live-anim-canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
+    .replay-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 3;
+      background: rgba(9, 11, 16, 0.78);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
     }
+    .replay-btn:hover { border-color: var(--accent); color: #6ee7b7; }
+
     .media-meta-row {
       display: flex;
       justify-content: space-between;
@@ -301,7 +314,9 @@
     .stage-panel { background: var(--surface-2); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
     .stage-frame {
       width: 100%;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 9 / 16;
+      max-height: 360px;
+      margin: 0 auto;
       border-radius: 12px;
       background: linear-gradient(145deg, #1b1838, #0f1726 72%);
       border: 1px solid var(--border);
@@ -311,8 +326,8 @@
       padding: 16px;
       overflow: hidden;
     }
-    .stage-frame.ratio-9-16 { aspect-ratio: 9 / 16; max-height: 360px; margin: 0 auto; }
-    .stage-frame.ratio-1-1 { aspect-ratio: 1 / 1; max-height: 320px; margin: 0 auto; }
+    .stage-frame.ratio-16-9 { aspect-ratio: 16 / 9; max-height: none; }
+    .stage-frame.ratio-1-1 { aspect-ratio: 1 / 1; max-height: 320px; }
     .stage-title { font-size: 1.02rem; font-weight: 700; margin-top: 8px; }
     .stage-script {
       font-size: 0.85rem;
@@ -326,7 +341,7 @@
     }
     .stage-meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 0.76rem; color: var(--muted); margin-top: 10px; }
 
-    /* TRY IT: STORY-DRIVEN FILMS + VIDEO BACKGROUND CHANGER */
+    /* TRY IT: STORY-DRIVEN CARTOON FILMS + VIDEO BACKGROUND CHANGER */
     .film-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
     @media (max-width: 900px) { .film-grid { grid-template-columns: 1fr; } }
 
@@ -478,9 +493,9 @@
         <span>KasiStudio AI</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#film-showcase">AI Short Film Animation</a></li>
-        <li><a href="#reels-showcase">Generated Short Reels</a></li>
-        <li><a href="#short-films">Try It Studio</a></li>
+        <li><a href="#reels-cartoons">TikTok & FB Reels Cartoons</a></li>
+        <li><a href="#short-films">Try Story & BG Swap</a></li>
+        <li><a href="#studio">Text & Image Studio</a></li>
         <li><a href="#packages">Packages & Payment</a></li>
       </ul>
       <a href="#packages" class="btn btn-primary btn-sm">Choose Package</a>
@@ -490,220 +505,137 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="pill-badge">AI Short Film Animation • Generated Short Reels • USDT / USDC & M-PESA</div>
-        <h1>Watch Real AI Short Films & Generated Reels</h1>
-        <p>Explore cinematic AI short film animations and high-converting vertical short reels, test story-driven film direction and background swaps, and order via USDT, USDC, or M-PESA.</p>
+        <div class="pill-badge">Animated Cartoons • TikTok & Facebook Reels (9:16) • USDT / USDC & M-PESA</div>
+        <h1>Animated Cartoon Short Films for TikTok & Facebook Reels</h1>
+        <p>Watch live vertical 9:16 animated cartoon shorts framed for TikTok and Facebook Reels, try story-driven cartoon scenes and background swaps, and checkout via USDT, USDC, or M-PESA.</p>
         <div class="hero-cta">
-          <a href="#film-showcase" class="btn btn-primary">Watch AI Short Films</a>
-          <a href="#reels-showcase" class="btn btn-secondary">Watch Generated Reels</a>
-          <a href="#short-films" class="btn btn-secondary">Try It Yourself</a>
+          <a href="#reels-cartoons" class="btn btn-primary">Watch Cartoon Reels</a>
+          <a href="#short-films" class="btn btn-secondary">Try Story & BG Changer</a>
+          <a href="#packages" class="btn btn-secondary">Packages & Payment</a>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 1: REAL SHOWINGS — AI SHORT FILM ANIMATION (16:9) -->
-    <section id="film-showcase">
+    <!-- LIVE ANIMATED CARTOONS FOR TIKTOK & FACEBOOK REELS (9:16) -->
+    <section id="reels-cartoons">
       <div class="container">
         <div class="section-head">
-          <h2>AI Short Film Animation — Screening Room</h2>
-          <p>Widescreen 16:9 story-driven AI animations with consistent characters, lighting, and voiceover pacing. Upload your rendered <code>samples/*.mp4</code> files anytime to swap in full audio-video playback.</p>
+          <h2>Animated Cartoon Short Films — TikTok & Facebook Reels (9:16)</h2>
+          <p>Live animated cartoon shorts formatted for full-screen 9:16 vertical playback with centered text-safe zones. Tap <strong>Replay</strong> to restart any cartoon loop, or drop matching <code>samples/*.mp4</code> files to play exported renders.</p>
         </div>
 
-        <div class="film-showcase-grid">
-          <div class="media-card">
+        <div class="reels-grid">
+          <!-- CARTOON 1 -->
+          <div class="cartoon-card">
             <div>
-              <div class="player-shell aspect-16-9">
-                <video
-                  class="real-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="samples/film-savannah.jpg"
-                  onerror="activateCanvasFallback(this, 'savannah')"
-                >
-                  <source src="samples/film-savannah.mp4" type="video/mp4" />
-                </video>
-                <canvas class="live-anim-canvas" data-scene="savannah" style="display:none;"></canvas>
+              <div class="reel-shell">
+                <canvas class="cartoon-canvas" data-cartoon="kioskHero"></canvas>
+                <video class="real-mp4-overlay" controls playsinline preload="metadata" data-mp4="samples/cartoon-kiosk-reel.mp4"></video>
+                <button type="button" class="replay-btn" onclick="replayCartoon('kioskHero', this)">Replay</button>
               </div>
               <div class="media-meta-row" style="margin-top:10px;">
-                <span class="stage-tag">16:9 • 3D / PAINTERLY SHORT FILM</span>
-                <span>0:45 • 3 Acts</span>
+                <span class="stage-tag">9:16 TIKTOK & FB REEL</span>
+                <span>0:18 • 2D Toon Loop</span>
               </div>
-              <h3 style="font-size:1.1rem; margin-top:6px;">"Dawn Over Mara" — Animated Brand Story</h3>
-              <p style="font-size:0.88rem; color:var(--muted);">Consistent lead character across three golden-hour scenes with atmospheric score and narrative arc.</p>
+              <h3 style="font-size:1.05rem; margin-top:6px;">"Kiosk Hustle" — Express Cartoon Short</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">Bouncy character motion, speed lines, and punchy captions framed inside TikTok/Reels safe zones.</p>
             </div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('AI Short Film Animation: Dawn Over Mara (16:9, 45s)')">Order Similar Short Film</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderCartoonFormat('Animated Cartoon Reel: Kiosk Hustle (9:16 TikTok & FB Reels)')">Order This Cartoon Style</button>
           </div>
 
-          <div class="media-card">
+          <!-- CARTOON 2 -->
+          <div class="cartoon-card">
             <div>
-              <div class="player-shell aspect-16-9">
-                <video
-                  class="real-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="samples/film-cyber-nairobi.jpg"
-                  onerror="activateCanvasFallback(this, 'nairobi2050')"
-                >
-                  <source src="samples/film-cyber-nairobi.mp4" type="video/mp4" />
-                </video>
-                <canvas class="live-anim-canvas" data-scene="nairobi2050" style="display:none;"></canvas>
+              <div class="reel-shell">
+                <canvas class="cartoon-canvas" data-cartoon="plotRocket"></canvas>
+                <video class="real-mp4-overlay" controls playsinline preload="metadata" data-mp4="samples/cartoon-plot-reel.mp4"></video>
+                <button type="button" class="replay-btn" onclick="replayCartoon('plotRocket', this)">Replay</button>
               </div>
               <div class="media-meta-row" style="margin-top:10px;">
-                <span class="stage-tag">16:9 • SCI-FI / STYLIZED ANIMATION</span>
-                <span>0:35 • Multi-Shot</span>
+                <span class="stage-tag">9:16 TIKTOK & FB REEL</span>
+                <span>0:22 • Story Explainer</span>
               </div>
-              <h3 style="font-size:1.1rem; margin-top:6px;">"Nairobi Express 2050" — Stylized Short</h3>
-              <p style="font-size:0.88rem; color:var(--muted);">Smooth camera tracking, neon skyline reflections, and synchronized title overlays built for launch trailers.</p>
+              <h3 style="font-size:1.05rem; margin-top:6px;">"Smart Land Move" — Story Cartoon</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">Animated character story taking viewers from rent stress to plot ownership with clear CTA.</p>
             </div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('AI Short Film Animation: Nairobi Express 2050 (16:9, 35s)')">Order Similar Short Film</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION 2: REAL GENERATED SHORT REELS (9:16 VERTICAL) -->
-    <section id="reels-showcase">
-      <div class="container">
-        <div class="section-head">
-          <h2>Real Generated Short Reels (9:16)</h2>
-          <p>Vertical TikTok, Instagram Reels, and YouTube Shorts engineered with 3-second visual hooks and bold captions.</p>
-        </div>
-
-        <div class="reels-showcase-grid">
-          <div class="media-card">
-            <div>
-              <div class="player-shell aspect-9-16">
-                <video
-                  class="real-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="samples/reel-plot.jpg"
-                  onerror="activateCanvasFallback(this, 'reelPlot')"
-                >
-                  <source src="samples/reel-plot.mp4" type="video/mp4" />
-                </video>
-                <canvas class="live-anim-canvas" data-scene="reelPlot" style="display:none;"></canvas>
-              </div>
-              <div class="media-meta-row" style="margin-top:10px;">
-                <span class="stage-tag">9:16 REEL</span>
-                <span>0:22 • Real Estate</span>
-              </div>
-              <h3 style="font-size:1.05rem; margin-top:6px;">Juja 50x100 Plot Showcase Reel</h3>
-              <p style="font-size:0.86rem; color:var(--muted);">Image-to-video aerial motion, title deed callout, and WhatsApp site-visit hook.</p>
-            </div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Real Estate 9:16 Showcase')">Use This Reel Format</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderCartoonFormat('Animated Cartoon Reel: Smart Land Move (9:16 Story Cartoon)')">Order This Cartoon Style</button>
           </div>
 
-          <div class="media-card">
+          <!-- CARTOON 3 -->
+          <div class="cartoon-card">
             <div>
-              <div class="player-shell aspect-9-16">
-                <video
-                  class="real-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="samples/reel-product.jpg"
-                  onerror="activateCanvasFallback(this, 'reelProduct')"
-                >
-                  <source src="samples/reel-product.mp4" type="video/mp4" />
-                </video>
-                <canvas class="live-anim-canvas" data-scene="reelProduct" style="display:none;"></canvas>
+              <div class="reel-shell">
+                <canvas class="cartoon-canvas" data-cartoon="neonMascot"></canvas>
+                <video class="real-mp4-overlay" controls playsinline preload="metadata" data-mp4="samples/cartoon-mascot-reel.mp4"></video>
+                <button type="button" class="replay-btn" onclick="replayCartoon('neonMascot', this)">Replay</button>
               </div>
               <div class="media-meta-row" style="margin-top:10px;">
-                <span class="stage-tag">9:16 REEL</span>
-                <span>0:18 • E-Commerce</span>
+                <span class="stage-tag">9:16 TIKTOK & FB REEL</span>
+                <span>0:15 • Brand Mascot</span>
               </div>
-              <h3 style="font-size:1.05rem; margin-top:6px;">Product Orbit & Price Drop Reel</h3>
-              <p style="font-size:0.86rem; color:var(--muted);">Background-replaced product studio spin with dynamic KES price badge.</p>
+              <h3 style="font-size:1.05rem; margin-top:6px;">"Brand Mascot Drop" — Promo Reel</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">High-contrast cartoon mascot bounce, glowing stars, and offer hook built for Facebook Reels.</p>
             </div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Product Orbit & Price Drop 9:16')">Use This Reel Format</button>
-          </div>
-
-          <div class="media-card">
-            <div>
-              <div class="player-shell aspect-9-16">
-                <video
-                  class="real-video"
-                  controls
-                  playsinline
-                  preload="metadata"
-                  poster="samples/reel-clinic.jpg"
-                  onerror="activateCanvasFallback(this, 'reelClinic')"
-                >
-                  <source src="samples/reel-clinic.mp4" type="video/mp4" />
-                </video>
-                <canvas class="live-anim-canvas" data-scene="reelClinic" style="display:none;"></canvas>
-              </div>
-              <div class="media-meta-row" style="margin-top:10px;">
-                <span class="stage-tag">9:16 REEL</span>
-                <span>0:25 • Clinic & Beauty</span>
-              </div>
-              <h3 style="font-size:1.05rem; margin-top:6px;">Dental & Aesthetic Offer Reel</h3>
-              <p style="font-size:0.86rem; color:var(--muted);">Hook-led explainer with clean captions and instant appointment CTA.</p>
-            </div>
-            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Clinic & Beauty Offer 9:16')">Use This Reel Format</button>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderCartoonFormat('Animated Cartoon Reel: Brand Mascot Drop (9:16 Promo Reel)')">Order This Cartoon Style</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TRY IT STUDIO: STORY-DRIVEN FILMS + VIDEO BACKGROUND CHANGER -->
+    <!-- TRY IT: STORY-DRIVEN CARTOON FILMS + VIDEO BACKGROUND CHANGER -->
     <section id="short-films">
       <div class="container">
         <div class="section-head">
-          <h2>AI Short Films — Try It (Story-Driven Films & Background Changer)</h2>
-          <p>Direct multi-scene story-driven short films or test live video background replacement on your clip.</p>
+          <h2>Try It — Story-Driven Cartoon Films & Video Background Changer</h2>
+          <p>Generate 3-act story-driven cartoon scripts for TikTok/Reels or test video background replacement on your clip.</p>
         </div>
 
         <div class="film-grid">
           <!-- STORY-DRIVEN SHORT FILM BUILDER -->
           <div class="studio-card">
-            <span class="stage-tag" style="margin-bottom:10px;">STORY-DRIVEN SHORT FILMS</span>
+            <span class="stage-tag" style="margin-bottom:10px;">STORY-DRIVEN CARTOON FILMS</span>
             <h3 style="font-size:1.15rem; margin-bottom:8px;">Try Story-Driven Film Director</h3>
 
             <div class="preset-strip">
-              <button type="button" class="preset-chip" onclick="loadFilmStory('founder')">Founder Journey (3 Acts)</button>
-              <button type="button" class="preset-chip" onclick="loadFilmStory('plot')">Land Buyer Story (3 Acts)</button>
-              <button type="button" class="preset-chip" onclick="loadFilmStory('clinic')">Clinic Relief Story (3 Acts)</button>
+              <button type="button" class="preset-chip" onclick="loadFilmStory('founder')">Cartoon Founder Story</button>
+              <button type="button" class="preset-chip" onclick="loadFilmStory('plot')">Cartoon Plot Buyer Story</button>
+              <button type="button" class="preset-chip" onclick="loadFilmStory('clinic')">Cartoon Clinic Story</button>
             </div>
 
             <label class="field-label" for="filmPremise">Story Premise & Character Continuity</label>
             <textarea
               id="filmPremise"
-              placeholder="Describe your character, setting, turning point, and ending call to action..."
+              placeholder="Describe your cartoon character, setting, turning point, and ending call to action..."
             ></textarea>
 
             <div class="controls-row">
               <div>
-                <label class="field-label" for="filmTone">Film Tone</label>
+                <label class="field-label" for="filmTone">Cartoon Tone</label>
                 <select id="filmTone">
+                  <option value="Playful & Punchy">Playful & Punchy</option>
                   <option value="Inspiring & Grounded">Inspiring & Grounded</option>
-                  <option value="Dramatic & Cinematic">Dramatic & Cinematic</option>
-                  <option value="Upbeat Brand Story">Upbeat Brand Story</option>
+                  <option value="Bold Comic Drama">Bold Comic Drama</option>
                 </select>
               </div>
               <div>
-                <label class="field-label" for="filmLength">Short Film Cut</label>
+                <label class="field-label" for="filmLength">Reel Duration</label>
                 <select id="filmLength">
-                  <option value="30s Micro-Film">30s Micro-Film</option>
-                  <option value="45s Story Reel" selected>45s Story Reel</option>
-                  <option value="60s Narrative Short">60s Narrative Short</option>
+                  <option value="15s Hook Reel">15s Hook Reel</option>
+                  <option value="30s Cartoon Short" selected>30s Cartoon Short</option>
+                  <option value="45s Story Reel">45s Story Reel</option>
                 </select>
               </div>
             </div>
 
             <div class="hero-cta" style="justify-content:flex-start;">
-              <button type="button" class="btn btn-primary btn-sm" onclick="buildStoryFilm()">Build Storyboard Scenes</button>
+              <button type="button" class="btn btn-primary btn-sm" onclick="buildStoryFilm()">Build Cartoon Scenes</button>
               <button type="button" class="btn btn-secondary btn-sm" onclick="attachFilmToPackage()">Attach Film to Package</button>
             </div>
 
             <div class="scene-list" id="filmSceneList">
-              <div class="scene-item"><strong>Act 1 — Hook & World:</strong> Establish the main character, setting, and everyday tension in the first 5 seconds.</div>
-              <div class="scene-item"><strong>Act 2 — Turning Point:</strong> Show the action, transformation, or proof with consistent character & visual style.</div>
-              <div class="scene-item"><strong>Act 3 — Resolution & CTA:</strong> Land the emotional takeaway and invite viewers to take the next step.</div>
+              <div class="scene-item"><strong>Act 1 — Hook & Character:</strong> Introduce the cartoon character and relatable hook in the first 3 seconds.</div>
+              <div class="scene-item"><strong>Act 2 — Cartoon Action & Shift:</strong> Expressive movement and visual payoff while keeping character design consistent.</div>
+              <div class="scene-item"><strong>Act 3 — Punchline & CTA:</strong> Clear takeaway and call to action placed above the bottom UI safe zone.</div>
             </div>
           </div>
 
@@ -727,17 +659,17 @@
               </div>
               <div>
                 <label class="field-label" for="bgSubjectText">Foreground Subject Label</label>
-                <input type="text" id="bgSubjectText" value="Presenter / Product Subject" oninput="applyBgChange()" />
+                <input type="text" id="bgSubjectText" value="Cartoon / Presenter Subject" oninput="applyBgChange()" />
               </div>
             </div>
 
             <label class="field-label" for="bgCustomPrompt">Custom Background Prompt / Edge Polish</label>
-            <input type="text" id="bgCustomPrompt" placeholder="e.g., Soft depth-of-field bokeh, matching warm rim light on edges..." oninput="applyBgChange()" style="margin-bottom:12px;" />
+            <input type="text" id="bgCustomPrompt" placeholder="e.g., Clean outline cutout, vibrant toon backdrop, matching rim light..." oninput="applyBgChange()" style="margin-bottom:12px;" />
 
             <div class="bg-stage" id="bgPreviewStage">
               <span class="stage-tag" id="bgActiveBadge">BG: EMERALD STUDIO BACKDROP</span>
               <div class="subject-cutout">
-                <div class="subject-cutout-title" id="bgCutoutTitle">Presenter / Product Subject</div>
+                <div class="subject-cutout-title" id="bgCutoutTitle">Cartoon / Presenter Subject</div>
                 <div class="subject-cutout-sub" id="bgCutoutNote">Subject isolated • New backdrop applied</div>
               </div>
               <div style="font-size:0.78rem; color:#e2e8f0;" id="bgMediaStatus">Ready: test with any preset or attach a clip/image above.</div>
@@ -758,72 +690,72 @@
     <section id="studio">
       <div class="container">
         <div class="section-head">
-          <h2>AI Video, Text-to-Video & Image-to-Video</h2>
-          <p>Build single-shot prompts or animate still images before attaching your brief to a package.</p>
+          <h2>Text-to-Cartoon & Image-to-Cartoon Generator</h2>
+          <p>Turn text scripts or still illustrations into 9:16 TikTok & Facebook Reels cartoon briefs.</p>
         </div>
         <div class="studio-card">
           <div class="mode-bar">
-            <button type="button" class="mode-btn active" data-mode="text-to-video" onclick="setMode('text-to-video')">Text to Video</button>
-            <button type="button" class="mode-btn" data-mode="image-to-video" onclick="setMode('image-to-video')">Image to Video</button>
-            <button type="button" class="mode-btn" data-mode="restyle-motion" onclick="setMode('restyle-motion')">Motion & Style Restyle</button>
+            <button type="button" class="mode-btn active" data-mode="text-to-video" onclick="setMode('text-to-video')">Text to Cartoon Video</button>
+            <button type="button" class="mode-btn" data-mode="image-to-video" onclick="setMode('image-to-video')">Image to Cartoon Motion</button>
+            <button type="button" class="mode-btn" data-mode="restyle-motion" onclick="setMode('restyle-motion')">Cartoon Style Restyle</button>
           </div>
 
           <div class="studio-grid">
             <div>
-              <label class="field-label" id="promptLabel" for="promptInput">Text-to-Video Prompt & Scene Direction</label>
-              <textarea id="promptInput" placeholder="Describe your scene, camera movement, lighting, or voiceover script..."></textarea>
+              <label class="field-label" id="promptLabel" for="promptInput">Text-to-Cartoon Prompt & Scene Direction</label>
+              <textarea id="promptInput" placeholder="Describe your cartoon scene, character expression, camera motion, or voiceover line..."></textarea>
 
               <div class="img-drop" id="imageInputBox" style="display:none;">
-                <label class="field-label" for="sourceImageFile" style="margin-bottom:6px;">Reference Image for Image-to-Video (JPG, PNG, WebP)</label>
+                <label class="field-label" for="sourceImageFile" style="margin-bottom:6px;">Reference Image for Image-to-Cartoon (JPG, PNG, WebP)</label>
                 <input type="file" id="sourceImageFile" accept="image/png,image/jpeg,image/webp" onchange="handleImageUpload(event)" />
                 <div class="img-preview-box" id="imgPreviewBox">
                   <img id="imgPreviewThumb" alt="Uploaded reference image" />
                   <div>
                     <div id="imgFileName" style="font-size:0.88rem; font-weight:600;"></div>
-                    <div style="font-size:0.78rem; color:var(--muted);">Loaded for motion & camera animation</div>
+                    <div style="font-size:0.78rem; color:var(--muted);">Loaded for cartoon animation</div>
                   </div>
                 </div>
               </div>
 
               <div class="controls-row">
                 <div>
-                  <label class="field-label" for="modelSelect">Engine Preset</label>
+                  <label class="field-label" for="modelSelect">Cartoon Engine</label>
                   <select id="modelSelect">
-                    <option value="KasiMotion Pro">KasiMotion Pro (Cinematic)</option>
-                    <option value="KasiFlash Turbo">KasiFlash Turbo (Fast Drafts)</option>
-                    <option value="KasiAvatar Sync">KasiAvatar Sync (Presenter / Lip)</option>
+                    <option value="KasiToon 2D">KasiToon 2D (Crisp Cel & Outlines)</option>
+                    <option value="KasiMotion Pro">KasiMotion Pro (Expressive Rig)</option>
+                    <option value="KasiComic 3D">KasiComic 3D (Stylized Pop)</option>
                   </select>
                 </div>
                 <div>
-                  <label class="field-label" for="styleSelect">Visual Style</label>
+                  <label class="field-label" for="styleSelect">Cartoon Style</label>
                   <select id="styleSelect">
-                    <option value="Studio Clean">Studio Clean</option>
-                    <option value="Cinematic">Cinematic</option>
-                    <option value="Social Reels">Social Reels</option>
-                    <option value="3D & Stylized">3D & Stylized</option>
+                    <option value="Bold 2D Toon">Bold 2D Toon</option>
+                    <option value="Comic Halftone">Comic Halftone</option>
+                    <option value="Stylized 3D">Stylized 3D</option>
+                    <option value="Flat Motion">Flat Motion</option>
                   </select>
                 </div>
                 <div>
                   <label class="field-label" for="durationSelect">Duration</label>
                   <select id="durationSelect">
-                    <option value="10s">10 seconds</option>
-                    <option value="15s" selected>15 seconds</option>
-                    <option value="30s (Multi-Shot)">30s (Multi-Shot)</option>
+                    <option value="15s" selected>15s Reel</option>
+                    <option value="24s">24s Short</option>
+                    <option value="35s">35s Story Reel</option>
                   </select>
                 </div>
               </div>
 
               <div style="margin-bottom:14px;">
-                <span class="field-label">Aspect Ratio</span>
+                <span class="field-label">Aspect Ratio (9:16 Default for TikTok & Facebook Reels)</span>
                 <div class="ratio-group" style="max-width:280px;">
-                  <button type="button" class="ratio-chip" data-ratio="9:16" onclick="setRatio('9:16', this)">9:16</button>
-                  <button type="button" class="ratio-chip active" data-ratio="16:9" onclick="setRatio('16:9', this)">16:9</button>
+                  <button type="button" class="ratio-chip active" data-ratio="9:16" onclick="setRatio('9:16', this)">9:16</button>
+                  <button type="button" class="ratio-chip" data-ratio="16:9" onclick="setRatio('16:9', this)">16:9</button>
                   <button type="button" class="ratio-chip" data-ratio="1:1" onclick="setRatio('1:1', this)">1:1</button>
                 </div>
               </div>
 
               <div class="hero-cta" style="justify-content:flex-start;">
-                <button type="button" class="btn btn-primary" onclick="generateStudioPreview()">Generate Video Plan</button>
+                <button type="button" class="btn btn-primary" onclick="generateStudioPreview()">Generate Cartoon Plan</button>
                 <button type="button" class="btn btn-secondary" onclick="attachStudioPlanToPackage()">Attach Plan to Package</button>
               </div>
             </div>
@@ -831,13 +763,13 @@
             <div class="stage-panel">
               <div class="stage-frame" id="stageFrame">
                 <div>
-                  <span class="stage-tag" id="stageModeBadge">TEXT TO VIDEO</span>
-                  <div class="stage-title" id="stageTitle">Studio Canvas Ready</div>
+                  <span class="stage-tag" id="stageModeBadge">TEXT TO CARTOON</span>
+                  <div class="stage-title" id="stageTitle">9:16 Reel Canvas Ready</div>
                 </div>
-                <div class="stage-script" id="stageScript">Enter a prompt or upload an image, set aspect ratio and style, then click "Generate Video Plan".</div>
+                <div class="stage-script" id="stageScript">Enter a cartoon prompt or upload an image, pick your style, and click "Generate Cartoon Plan".</div>
                 <div class="stage-meta">
-                  <span id="stageRatio">Ratio: 16:9</span>
-                  <span id="stageEngine">KasiMotion Pro • Studio Clean • 15s</span>
+                  <span id="stageRatio">Ratio: 9:16</span>
+                  <span id="stageEngine">KasiToon 2D • Bold 2D Toon • 15s</span>
                 </div>
               </div>
             </div>
@@ -851,56 +783,56 @@
       <div class="container">
         <div class="section-head">
           <h2>Packages & Payment Modes (USDT, USDC & M-PESA)</h2>
-          <p>Select a package to attach your short film, Reel, or background swap brief and pay via <strong>USDT</strong>, <strong>USDC</strong>, or <strong>M-PESA</strong>.</p>
+          <p>Payment options—including <strong>USDT</strong> and <strong>USDC</strong> stablecoins plus <strong>M-PESA</strong>—are attached directly to each package.</p>
         </div>
 
         <div class="pricing-grid">
           <div class="pkg-card">
             <div>
-              <h3>Starter Creator Pack</h3>
+              <h3>Starter Cartoon Pack</h3>
               <div class="pkg-price">KES 1,500 <span>/ ~12 USDT or USDC</span></div>
               <ul class="pkg-list">
-                <li>• 3 AI-assisted short reels or BG swaps</li>
-                <li>• Text-to-video or image-to-video cuts</li>
-                <li>• Captions & export ready</li>
+                <li>• 3 animated 9:16 cartoon reels (TikTok & FB)</li>
+                <li>• Hook captions & safe-zone framing</li>
+                <li>• Background swap or character loop</li>
               </ul>
             </div>
             <div class="pkg-payment-attach">
               <strong>Modes:</strong> USDT • USDC • M-PESA (Paybill <strong>247247</strong>, Acc <strong>740532</strong>)
             </div>
-            <button type="button" class="btn btn-secondary" onclick="openPackageCheckout('Starter Creator Pack (KES 1,500 / ~12 USDT-USDC)', '12')">Pay & Order Starter</button>
+            <button type="button" class="btn btn-secondary" onclick="openPackageCheckout('Starter Cartoon Pack (KES 1,500 / ~12 USDT-USDC)', '12')">Pay & Order Starter</button>
           </div>
 
           <div class="pkg-card featured">
             <div>
-              <h3>Growth Studio Pack</h3>
+              <h3>Growth Reels Pack</h3>
               <div class="pkg-price">KES 2,500 <span>/ ~20 USDT or USDC</span></div>
               <ul class="pkg-list">
-                <li>• 5 story reels, animation shots, or BG changes</li>
-                <li>• Multi-ratio exports (9:16, 16:9, 1:1)</li>
+                <li>• 5 story cartoon shorts & background swaps</li>
+                <li>• 9:16 TikTok & Facebook Reels ready</li>
                 <li>• Storyboard scripts & priority delivery</li>
               </ul>
             </div>
             <div class="pkg-payment-attach">
               <strong>Modes:</strong> USDT • USDC • M-PESA (Paybill <strong>247247</strong>, Acc <strong>740532</strong>)
             </div>
-            <button type="button" class="btn btn-primary" onclick="openPackageCheckout('Growth Studio Pack (KES 2,500 / ~20 USDT-USDC)', '20')">Pay & Order Growth</button>
+            <button type="button" class="btn btn-primary" onclick="openPackageCheckout('Growth Reels Pack (KES 2,500 / ~20 USDT-USDC)', '20')">Pay & Order Growth</button>
           </div>
 
           <div class="pkg-card">
             <div>
-              <h3>Monthly Studio Retainer</h3>
+              <h3>Monthly Cartoon Series</h3>
               <div class="pkg-price">KES 22,000 <span>/ ~170 USDT or USDC / mo</span></div>
               <ul class="pkg-list">
-                <li>• 24 AI short films, reels & storyboards/month</li>
-                <li>• Ongoing story direction & background swaps</li>
+                <li>• 24 animated cartoon shorts & reels/month</li>
+                <li>• Recurring cartoon characters & series arcs</li>
                 <li>• Dedicated production queue</li>
               </ul>
             </div>
             <div class="pkg-payment-attach">
               <strong>Modes:</strong> USDT • USDC • M-PESA (Paybill <strong>247247</strong>, Acc <strong>740532</strong>)
             </div>
-            <button type="button" class="btn btn-secondary" onclick="openPackageCheckout('Monthly Studio Retainer (KES 22,000 / ~170 USDT-USDC/mo)', '170')">Pay & Order Monthly</button>
+            <button type="button" class="btn btn-secondary" onclick="openPackageCheckout('Monthly Cartoon Series (KES 22,000 / ~170 USDT-USDC/mo)', '170')">Pay & Order Monthly</button>
           </div>
         </div>
       </div>
@@ -943,8 +875,8 @@
       <label class="field-label" for="orderClientName">Your Name / Brand</label>
       <input type="text" id="orderClientName" placeholder="Enter your name or business" style="margin-bottom:10px;" />
 
-      <label class="field-label" for="orderBrief">Attached Studio Brief</label>
-      <textarea id="orderBrief" style="min-height:78px; margin-bottom:12px;" placeholder="Your short film, Reel, background swap, or video brief..."></textarea>
+      <label class="field-label" for="orderBrief">Attached Cartoon / Reel Brief</label>
+      <textarea id="orderBrief" style="min-height:78px; margin-bottom:12px;" placeholder="Your TikTok/Facebook Reels cartoon brief..."></textarea>
 
       <button type="button" class="btn btn-primary" style="width:100%;" onclick="confirmPackageOrder()">Confirm & Send on WhatsApp (+254 704 770 170)</button>
     </div>
@@ -965,101 +897,223 @@
       "TRC20 (Tron)": "TYoursTronWalletAddressHere"
     };
 
-    /* LIVE ANIMATED CANVAS FALLBACKS WHEN samples/*.mp4 ARE NOT YET UPLOADED */
-    const activeCanvases = [];
-    document.querySelectorAll(".real-video").forEach((vid) => {
-      const src = vid.querySelector("source");
-      if (src) {
-        src.addEventListener("error", () => {
-          const canvas = vid.parentElement.querySelector(".live-anim-canvas");
-          activateCanvasFallback(vid, canvas ? canvas.dataset.scene : "savannah");
+    /* LIVE ANIMATED CARTOON REELS FOR TIKTOK & FACEBOOK REELS */
+    const cartoonStartTimes = {
+      kioskHero: performance.now(),
+      plotRocket: performance.now(),
+      neonMascot: performance.now()
+    };
+    const cartoonInstances = [];
+
+    document.querySelectorAll(".cartoon-card").forEach((card) => {
+      const canvas = card.querySelector(".cartoon-canvas");
+      const video = card.querySelector(".real-mp4-overlay");
+      const key = canvas ? canvas.dataset.cartoon : "kioskHero";
+      if (canvas) cartoonInstances.push({ canvas, key });
+
+      if (video && video.dataset.mp4) {
+        const probe = document.createElement("source");
+        probe.src = video.dataset.mp4;
+        probe.type = "video/mp4";
+        probe.addEventListener("error", () => {
+          video.style.display = "none";
         });
+        video.addEventListener("loadeddata", () => {
+          video.style.display = "block";
+        });
+        video.appendChild(probe);
       }
     });
 
-    function activateCanvasFallback(videoEl, sceneKey) {
-      if (!videoEl || !videoEl.parentElement) return;
-      videoEl.style.display = "none";
-      const canvas = videoEl.parentElement.querySelector(".live-anim-canvas");
-      if (!canvas) return;
-      canvas.style.display = "block";
-      if (!activeCanvases.some((item) => item.canvas === canvas)) {
-        activeCanvases.push({ canvas, scene: sceneKey || "savannah" });
+    function replayCartoon(key, btn) {
+      cartoonStartTimes[key] = performance.now();
+      const card = btn ? btn.closest(".cartoon-card") : null;
+      const vid = card ? card.querySelector(".real-mp4-overlay") : null;
+      if (vid && vid.style.display === "block") {
+        vid.currentTime = 0;
+        vid.play();
       }
     }
 
-    const sceneConfigs = {
-      savannah: { c1: "#92400e", c2: "#0f172a", tag: "AI SHORT FILM • ACT II", line1: "Dawn Over Mara", line2: "Golden hour character tracking shot" },
-      nairobi2050: { c1: "#4c1d95", c2: "#090d16", tag: "STYLIZED ANIMATION", line1: "Nairobi Express 2050", line2: "Neon skyline orbit • 24fps motion" },
-      reelPlot: { c1: "#065f46", c2: "#090d16", tag: "9:16 REEL • HOOK", line1: "Juja 50x100 Plots", line2: "Ready Title Deeds • KES 650K" },
-      reelProduct: { c1: "#78350f", c2: "#0b0f19", tag: "9:16 PRODUCT SPIN", line1: "Studio Showcase", line2: "Clean BG Swap + Price Badge" },
-      reelClinic: { c1: "#1e3a8a", c2: "#090d16", tag: "9:16 CLINIC REEL", line1: "Smile Makeover", line2: "Book Today on WhatsApp" }
-    };
+    function drawCartoonCharacter(ctx, cx, cy, scale, bounce, blink, bodyColor, shirtColor) {
+      ctx.save();
+      ctx.translate(cx, cy + bounce);
+      ctx.scale(scale, scale);
 
-    function renderAnimatedFrames(now) {
-      const t = now * 0.001;
-      activeCanvases.forEach(({ canvas, scene }) => {
+      // Shadow
+      ctx.fillStyle = "rgba(0,0,0,0.32)";
+      ctx.beginPath();
+      ctx.ellipse(0, 68 - bounce * 0.6, 36, 9, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Torso / Jacket
+      ctx.fillStyle = shirtColor;
+      ctx.strokeStyle = "#090b10";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.roundRect(-24, 14, 48, 46, 12);
+      ctx.fill();
+      ctx.stroke();
+
+      // Head
+      ctx.fillStyle = bodyColor;
+      ctx.beginPath();
+      ctx.arc(0, -18, 32, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      // Cartoon Hair Puff
+      ctx.fillStyle = "#090b10";
+      ctx.beginPath();
+      ctx.arc(-10, -48, 12, 0, Math.PI * 2);
+      ctx.arc(6, -51, 14, 0, Math.PI * 2);
+      ctx.arc(20, -44, 10, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Eyes
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(-11, -20, 9, 0, Math.PI * 2);
+      ctx.arc(11, -20, 9, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.stroke();
+
+      if (blink) {
+        ctx.strokeStyle = "#090b10";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(-18, -20); ctx.lineTo(-4, -20);
+        ctx.moveTo(4, -20); ctx.lineTo(18, -20);
+        ctx.stroke();
+      } else {
+        ctx.fillStyle = "#090b10";
+        ctx.beginPath();
+        ctx.arc(-9, -20, 4.2, 0, Math.PI * 2);
+        ctx.arc(13, -20, 4.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // Grin
+      ctx.strokeStyle = "#090b10";
+      ctx.lineWidth = 3.5;
+      ctx.beginPath();
+      ctx.arc(2, -6, 12, 0.15 * Math.PI, 0.85 * Math.PI);
+      ctx.stroke();
+
+      ctx.restore();
+    }
+
+    function renderCartoonLoops(now) {
+      cartoonInstances.forEach(({ canvas, key }) => {
         const rect = canvas.getBoundingClientRect();
         if (rect.width === 0 || rect.height === 0) return;
         if (canvas.width !== Math.floor(rect.width) || canvas.height !== Math.floor(rect.height)) {
           canvas.width = Math.floor(rect.width);
           canvas.height = Math.floor(rect.height);
         }
+
         const ctx = canvas.getContext("2d");
         const w = canvas.width;
         const h = canvas.height;
-        const cfg = sceneConfigs[scene] || sceneConfigs.savannah;
+        const elapsed = (now - (cartoonStartTimes[key] || now)) * 0.001;
+        const bounce = Math.abs(Math.sin(elapsed * 4.5)) * -14;
+        const blink = Math.sin(elapsed * 2.1) > 0.96;
 
-        const grad = ctx.createLinearGradient(0, 0, w, h);
-        grad.addColorStop(0, cfg.c1);
-        grad.addColorStop(1, cfg.c2);
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, w, h);
+        if (key === "kioskHero") {
+          const sky = ctx.createLinearGradient(0, 0, 0, h);
+          sky.addColorStop(0, "#4c1d95");
+          sky.addColorStop(1, "#0f172a");
+          ctx.fillStyle = sky;
+          ctx.fillRect(0, 0, w, h);
 
-        // Moving light orbs simulating camera motion
-        for (let i = 0; i < 4; i++) {
-          const x = w * (0.2 + 0.2 * i) + Math.sin(t * 1.1 + i) * 26;
-          const y = h * 0.42 + Math.cos(t * 0.9 + i * 1.5) * 22;
-          const r = Math.min(w, h) * (0.14 + 0.03 * Math.sin(t + i));
+          // Speed lines
+          ctx.strokeStyle = "rgba(255,255,255,0.12)";
+          ctx.lineWidth = 2;
+          for (let i = 0; i < 6; i++) {
+            const lx = ((elapsed * 120 + i * 55) % (w + 60)) - 30;
+            ctx.beginPath();
+            ctx.moveTo(lx, h * 0.25);
+            ctx.lineTo(lx + 24, h * 0.25);
+            ctx.stroke();
+          }
+
+          drawCartoonCharacter(ctx, w * 0.5, h * 0.54, Math.min(w, h) / 260, bounce, blink, "#fbbf24", "#10b981");
+        } else if (key === "plotRocket") {
+          const sky = ctx.createLinearGradient(0, 0, 0, h);
+          sky.addColorStop(0, "#065f46");
+          sky.addColorStop(1, "#090d16");
+          ctx.fillStyle = sky;
+          ctx.fillRect(0, 0, w, h);
+
+          // Floating plot / growth badge
+          const floatY = h * 0.27 + Math.sin(elapsed * 3) * 8;
+          ctx.fillStyle = "#f59e0b";
           ctx.beginPath();
-          ctx.fillStyle = "rgba(255,255,255,0.08)";
-          ctx.arc(x, y, r, 0, Math.PI * 2);
+          ctx.roundRect(w * 0.22, floatY, w * 0.56, 34, 10);
           ctx.fill();
+          ctx.fillStyle = "#090b10";
+          ctx.font = "800 13px system-ui, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("TITLE READY • 9:16 REEL", w * 0.5, floatY + 21);
+          ctx.textAlign = "start";
+
+          drawCartoonCharacter(ctx, w * 0.5, h * 0.56, Math.min(w, h) / 265, bounce * 0.7, blink, "#fcd34d", "#7c5cff");
+        } else {
+          const sky = ctx.createLinearGradient(0, 0, w, h);
+          sky.addColorStop(0, "#78350f");
+          sky.addColorStop(1, "#111827");
+          ctx.fillStyle = sky;
+          ctx.fillRect(0, 0, w, h);
+
+          // Rotating comic burst behind character
+          ctx.save();
+          ctx.translate(w * 0.5, h * 0.48);
+          ctx.rotate(elapsed * 0.5);
+          ctx.strokeStyle = "rgba(251, 191, 36, 0.22)";
+          ctx.lineWidth = 3;
+          for (let r = 0; r < 10; r++) {
+            ctx.rotate((Math.PI * 2) / 10);
+            ctx.beginPath();
+            ctx.moveTo(28, 0);
+            ctx.lineTo(w * 0.65, 0);
+            ctx.stroke();
+          }
+          ctx.restore();
+
+          drawCartoonCharacter(ctx, w * 0.5, h * 0.54, Math.min(w, h) / 260, bounce, blink, "#fde68a", "#ec4899");
         }
 
-        // Top badge
-        ctx.fillStyle = "rgba(16, 185, 129, 0.22)";
-        ctx.fillRect(14, 14, Math.min(w - 28, 175), 22);
+        // Top TikTok/Reels safe-zone label
+        ctx.fillStyle = "rgba(9, 11, 16, 0.72)";
+        ctx.fillRect(14, 46, w - 28, 26);
         ctx.fillStyle = "#6ee7b7";
         ctx.font = "bold 11px system-ui, sans-serif";
-        ctx.fillText(cfg.tag, 22, 29);
+        ctx.fillText("TIKTOK & FACEBOOK REELS • 9:16 SAFE ZONE", 22, 63);
 
-        // Animated caption card
-        const pulse = Math.sin(t * 2) * 3;
-        ctx.fillStyle = "rgba(9, 11, 16, 0.76)";
-        ctx.fillRect(14, h - 76 + pulse, w - 28, 60);
-        ctx.fillStyle = "#f8fafc";
-        ctx.font = "bold 15px system-ui, sans-serif";
-        ctx.fillText(cfg.line1, 24, h - 50 + pulse);
-        ctx.fillStyle = "#cbd5e1";
-        ctx.font = "12px system-ui, sans-serif";
-        ctx.fillText(cfg.line2, 24, h - 30 + pulse);
+        // Bottom caption inside safe zone (above bottom UI icons)
+        const capY = h - 108;
+        ctx.fillStyle = "rgba(9, 11, 16, 0.84)";
+        ctx.fillRect(16, capY, w - 32, 46);
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 13px system-ui, sans-serif";
+        ctx.fillText("Watch full story • Tap to order yours", 24, capY + 28);
       });
-      requestAnimationFrame(renderAnimatedFrames);
-    }
-    requestAnimationFrame(renderAnimatedFrames);
 
-    function orderFromShowcase(label) {
+      requestAnimationFrame(renderCartoonLoops);
+    }
+    requestAnimationFrame(renderCartoonLoops);
+
+    function orderCartoonFormat(label) {
       document.getElementById("orderBrief").value = label;
-      openPackageCheckout("Growth Studio Pack (KES 2,500 / ~20 USDT-USDC)", "20");
+      openPackageCheckout("Growth Reels Pack (KES 2,500 / ~20 USDT-USDC)", "20");
     }
 
-    /* TEXT / IMAGE TO VIDEO STUDIO */
+    /* TEXT / IMAGE TO CARTOON STUDIO */
     let currentMode = "text-to-video";
-    let currentRatio = "16:9";
+    let currentRatio = "9:16";
     let uploadedImageName = "";
     let uploadedBgMediaName = "";
-    let selectedPackage = "Growth Studio Pack (KES 2,500 / ~20 USDT-USDC)";
+    let selectedPackage = "Growth Reels Pack (KES 2,500 / ~20 USDT-USDC)";
     let approxStable = "20";
     let paymentMode = "USDT";
 
@@ -1073,17 +1127,17 @@
       const badge = document.getElementById("stageModeBadge");
 
       if (mode === "image-to-video") {
-        label.textContent = "Image-to-Video Motion & Camera Prompt";
+        label.textContent = "Image-to-Cartoon Motion & Camera Prompt";
         imgBox.style.display = "block";
-        badge.textContent = "IMAGE TO VIDEO";
+        badge.textContent = "IMAGE TO CARTOON";
       } else if (mode === "restyle-motion") {
-        label.textContent = "Motion & Visual Restyle Instructions";
+        label.textContent = "Cartoon Style Restyle Instructions";
         imgBox.style.display = "block";
-        badge.textContent = "MOTION & RESTYLE";
+        badge.textContent = "CARTOON RESTYLE";
       } else {
-        label.textContent = "Text-to-Video Prompt & Scene Direction";
+        label.textContent = "Text-to-Cartoon Prompt & Scene Direction";
         imgBox.style.display = "none";
-        badge.textContent = "TEXT TO VIDEO";
+        badge.textContent = "TEXT TO CARTOON";
       }
     }
 
@@ -1093,8 +1147,8 @@
       if (btn) btn.classList.add("active");
 
       const frame = document.getElementById("stageFrame");
-      frame.classList.remove("ratio-9-16", "ratio-1-1");
-      if (ratio === "9:16") frame.classList.add("ratio-9-16");
+      frame.classList.remove("ratio-16-9", "ratio-1-1");
+      if (ratio === "16:9") frame.classList.add("ratio-16-9");
       if (ratio === "1:1") frame.classList.add("ratio-1-1");
       document.getElementById("stageRatio").textContent = `Ratio: ${ratio}`;
     }
@@ -1119,18 +1173,18 @@
       const duration = document.getElementById("durationSelect").value;
       const promptText = rawPrompt || (
         currentMode === "image-to-video" || currentMode === "restyle-motion"
-          ? `Animate ${uploadedImageName || "uploaded image"} with controlled motion and clean transitions`
-          : "Hook-first visual narrative with smooth camera movement and clear call to action"
+          ? `Animate ${uploadedImageName || "uploaded image"} in ${style} cartoon style with expressive bounce`
+          : "Expressive cartoon character hook for TikTok & Facebook Reels with bold captions"
       );
 
-      document.getElementById("stageTitle").textContent = `${currentMode.replace(/-/g, " ").toUpperCase()} • ${currentRatio}`;
+      document.getElementById("stageTitle").textContent = `${style} • ${currentRatio}`;
       document.getElementById("stageScript").textContent =
-        `Ref: ${uploadedImageName || "Text Prompt"}\nDirection: "${promptText}"`;
+        `Ref: ${uploadedImageName || "Cartoon Prompt"}\nDirection: "${promptText}"`;
       document.getElementById("stageEngine").textContent = `${model} • ${style} • ${duration}`;
     }
 
     function attachStudioPlanToPackage() {
-      const promptText = document.getElementById("promptInput").value.trim() || uploadedImageName || "AI Video Plan";
+      const promptText = document.getElementById("promptInput").value.trim() || uploadedImageName || "Cartoon Reel Plan";
       const model = document.getElementById("modelSelect").value;
       const style = document.getElementById("styleSelect").value;
       const duration = document.getElementById("durationSelect").value;
@@ -1139,11 +1193,11 @@
       openPackageCheckout(selectedPackage, approxStable);
     }
 
-    /* STORY-DRIVEN SHORT FILMS ("TRY IT") */
+    /* STORY-DRIVEN CARTOON FILMS ("TRY IT") */
     const filmPresets = {
-      founder: "A young Kenyan founder opening a neighborhood bakery at dawn—same warm apron and counter across every scene, turning early doubts into loyal daily customers.",
-      plot: "A family tired of monthly rent exploring a serviced plot with clear roads and title docs—moving from caution to confidence with a weekend site visit.",
-      clinic: "A busy professional dealing with discomfort before finding a calm, transparent clinic visit—structured into a clear problem, care moment, and easy booking."
+      founder: "Cartoon hustler opening a busy morning juice & snack cart—same green cap and cheerful grin across every Reel beat, winning regular customers.",
+      plot: "Cartoon couple comparing renting vs. owning a serviced plot—clear visual shift from worry to celebration with a WhatsApp inquiry callout.",
+      clinic: "Cartoon character skipping checkups until a friendly clinic visit solves the problem fast—clear 3-act Reel flow."
     };
 
     function loadFilmStory(key) {
@@ -1152,22 +1206,22 @@
     }
 
     function buildStoryFilm() {
-      const premise = document.getElementById("filmPremise").value.trim() || "A focused character-driven short story with clear emotional progression.";
+      const premise = document.getElementById("filmPremise").value.trim() || "A character-driven cartoon Reel with clear emotional payoff.";
       const tone = document.getElementById("filmTone").value;
       const length = document.getElementById("filmLength").value;
 
       document.getElementById("filmSceneList").innerHTML = `
         <div class="scene-item"><strong>Act 1 — Hook & Character (${length} • ${tone}):</strong> ${premise}</div>
-        <div class="scene-item"><strong>Act 2 — Conflict & Turning Point:</strong> Keep character look & location consistent while showing the key shift or proof.</div>
-        <div class="scene-item"><strong>Act 3 — Payoff & Call to Action:</strong> Close on a memorable takeaway and direct next step on WhatsApp +254 704 770 170.</div>
+        <div class="scene-item"><strong>Act 2 — Cartoon Action & Shift:</strong> Keep character design & expressions consistent while escalating the story beat.</div>
+        <div class="scene-item"><strong>Act 3 — Payoff & CTA:</strong> Clear ending beat and WhatsApp +254 704 770 170 CTA inside the 9:16 safe zone.</div>
       `;
     }
 
     function attachFilmToPackage() {
-      const premise = document.getElementById("filmPremise").value.trim() || "Story-driven short film";
+      const premise = document.getElementById("filmPremise").value.trim() || "Story-driven cartoon Reel";
       const tone = document.getElementById("filmTone").value;
       const length = document.getElementById("filmLength").value;
-      document.getElementById("orderBrief").value = `[AI SHORT FILM | ${length} | ${tone}] ${premise}`;
+      document.getElementById("orderBrief").value = `[CARTOON SHORT FILM | ${length} | ${tone}] ${premise}`;
       openPackageCheckout(selectedPackage, approxStable);
     }
 
@@ -1191,7 +1245,7 @@
 
     function applyBgChange() {
       const preset = document.getElementById("bgPresetSelect").value;
-      const subject = document.getElementById("bgSubjectText").value.trim() || "Presenter / Product Subject";
+      const subject = document.getElementById("bgSubjectText").value.trim() || "Cartoon / Presenter Subject";
       const customNote = document.getElementById("bgCustomPrompt").value.trim();
 
       const stage = document.getElementById("bgPreviewStage");
@@ -1210,7 +1264,7 @@
 
       document.getElementById("bgActiveBadge").textContent = presetLabels[preset] || "BG: STUDIO BACKDROP";
       document.getElementById("bgCutoutTitle").textContent = subject;
-      document.getElementById("bgCutoutNote").textContent = customNote || "Foreground isolated • Lighting blended to new backdrop";
+      document.getElementById("bgCutoutNote").textContent = customNote || "Subject isolated • New backdrop applied";
       if (uploadedBgMediaName) {
         document.getElementById("bgMediaStatus").textContent = `Active source: ${uploadedBgMediaName}`;
       }
@@ -1270,7 +1324,7 @@
 
     function confirmPackageOrder() {
       const name = document.getElementById("orderClientName").value.trim() || "Client";
-      const brief = document.getElementById("orderBrief").value.trim() || "AI Video / Short Film order";
+      const brief = document.getElementById("orderBrief").value.trim() || "Animated Cartoon Reel order";
       const net = document.getElementById("stableNetwork").value;
 
       const paySummary = paymentMode === "MPESA"
