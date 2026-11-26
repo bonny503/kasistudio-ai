@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KasiStudio AI | AI Short Films, Storyboard Studio, Background Changer & Stablecoins</title>
-  <meta name="description" content="Try AI short films, story-driven multi-scene films, video background changer, text-to-video, and image-to-video with USDT, USDC, or M-PESA package checkout." />
-  <meta name="keywords" content="AI short films, story driven AI film, video background changer, AI text to video, AI image to video, USDT, USDC, KasiStudio AI" />
+  <title>KasiStudio AI | AI Short Film Animation, Generated Reels & Video Studio</title>
+  <meta name="description" content="Watch AI short film animations and generated short reels, try text-to-video, image-to-video, and video background changer, and pay via USDT, USDC, or M-PESA." />
+  <meta name="keywords" content="AI short film animation, generated short reels, AI text to video, AI image to video, video background changer, USDT, USDC, KasiStudio AI" />
   <meta name="robots" content="index, follow" />
 
-  <meta property="og:title" content="KasiStudio AI | AI Short Films & Video Background Changer" />
-  <meta property="og:description" content="Try story-driven AI short films and video background replacement with USDT, USDC, and M-PESA package checkout." />
+  <meta property="og:title" content="KasiStudio AI | AI Short Film Animation & Generated Short Reels" />
+  <meta property="og:description" content="Explore AI short film animations, vertical generated reels, background changer, and USDT/USDC/M-PESA packages." />
   <meta property="og:type" content="website" />
 
   <script type="application/ld+json">
@@ -63,7 +63,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
       min-height: 66px;
       flex-wrap: wrap;
     }
@@ -83,13 +83,13 @@
       background: linear-gradient(135deg, var(--primary), var(--accent));
       display: inline-block;
     }
-    .nav-links { display: flex; align-items: center; gap: 6px; list-style: none; flex-wrap: wrap; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; flex-wrap: wrap; }
     .nav-links a {
       color: var(--muted);
       text-decoration: none;
-      font-size: 0.92rem;
+      font-size: 0.9rem;
       font-weight: 500;
-      padding: 7px 12px;
+      padding: 7px 11px;
       border-radius: 8px;
       transition: color 0.15s, background 0.15s;
     }
@@ -135,18 +135,83 @@
       font-size: clamp(2.05rem, 4.8vw, 3.35rem);
       line-height: 1.12;
       letter-spacing: -0.025em;
-      max-width: 840px;
+      max-width: 860px;
       margin: 0 auto 14px;
     }
     .hero p { color: var(--muted); max-width: 680px; margin: 0 auto 24px; font-size: 1.03rem; }
     .hero-cta { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 
-    /* STUDIO CARDS */
     section { padding: 44px 0; }
     .section-head { margin-bottom: 20px; }
     .section-head h2 { font-size: 1.7rem; letter-spacing: -0.02em; margin-bottom: 6px; }
     .section-head p { color: var(--muted); }
 
+    /* SHOWCASE: AI SHORT FILM ANIMATION (16:9) & GENERATED SHORT REELS (9:16) */
+    .film-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 22px;
+    }
+    .reels-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .media-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+    }
+    .player-shell {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #06080d;
+    }
+    .aspect-16-9 { aspect-ratio: 16 / 9; }
+    .aspect-9-16 { aspect-ratio: 9 / 16; max-height: 410px; margin: 0 auto; }
+
+    .real-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      background: #05070c;
+    }
+    .live-anim-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .media-meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .stage-tag {
+      display: inline-flex;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(16, 185, 129, 0.18);
+      color: #6ee7b7;
+      width: fit-content;
+    }
+
+    /* STUDIO CARDS */
     .studio-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -233,7 +298,6 @@
     .img-preview-box { margin-top: 10px; display: none; align-items: center; gap: 12px; }
     .img-preview-box img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
 
-    /* STAGE PREVIEW */
     .stage-panel { background: var(--surface-2); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
     .stage-frame {
       width: 100%;
@@ -249,16 +313,6 @@
     }
     .stage-frame.ratio-9-16 { aspect-ratio: 9 / 16; max-height: 360px; margin: 0 auto; }
     .stage-frame.ratio-1-1 { aspect-ratio: 1 / 1; max-height: 320px; margin: 0 auto; }
-    .stage-tag {
-      display: inline-flex;
-      font-size: 0.72rem;
-      font-weight: 700;
-      padding: 3px 10px;
-      border-radius: 999px;
-      background: rgba(16, 185, 129, 0.18);
-      color: #6ee7b7;
-      width: fit-content;
-    }
     .stage-title { font-size: 1.02rem; font-weight: 700; margin-top: 8px; }
     .stage-script {
       font-size: 0.85rem;
@@ -272,7 +326,7 @@
     }
     .stage-meta { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: 0.76rem; color: var(--muted); margin-top: 10px; }
 
-    /* AI SHORT FILMS & VIDEO BACKGROUND CHANGER ("TRY IT") */
+    /* TRY IT: STORY-DRIVEN FILMS + VIDEO BACKGROUND CHANGER */
     .film-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
     @media (max-width: 900px) { .film-grid { grid-template-columns: 1fr; } }
 
@@ -340,7 +394,7 @@
     }
     .pkg-payment-attach strong { color: #6ee7b7; }
 
-    /* MODAL WITH STABLECOIN (USDT / USDC) + M-PESA */
+    /* MODAL */
     .modal-bg {
       display: none;
       position: fixed;
@@ -424,8 +478,9 @@
         <span>KasiStudio AI</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#studio">AI Studio</a></li>
-        <li><a href="#short-films">AI Short Films (Try It)</a></li>
+        <li><a href="#film-showcase">AI Short Film Animation</a></li>
+        <li><a href="#reels-showcase">Generated Short Reels</a></li>
+        <li><a href="#short-films">Try It Studio</a></li>
         <li><a href="#packages">Packages & Payment</a></li>
       </ul>
       <a href="#packages" class="btn btn-primary btn-sm">Choose Package</a>
@@ -435,130 +490,176 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="pill-badge">AI Short Films • Story-Driven Films • Video Background Changer • USDT / USDC & M-PESA</div>
-        <h1>Direct AI Short Films & Swap Video Backgrounds</h1>
-        <p>Try story-driven AI short films with multi-scene beats, test live video background replacement, generate text or image motion clips, and checkout via USDT, USDC, or M-PESA.</p>
+        <div class="pill-badge">AI Short Film Animation • Generated Short Reels • USDT / USDC & M-PESA</div>
+        <h1>Watch Real AI Short Films & Generated Reels</h1>
+        <p>Explore cinematic AI short film animations and high-converting vertical short reels, test story-driven film direction and background swaps, and order via USDT, USDC, or M-PESA.</p>
         <div class="hero-cta">
-          <a href="#short-films" class="btn btn-primary">Try AI Short Films</a>
-          <a href="#studio" class="btn btn-secondary">Text & Image to Video</a>
-          <a href="#packages" class="btn btn-secondary">Packages & Payment</a>
+          <a href="#film-showcase" class="btn btn-primary">Watch AI Short Films</a>
+          <a href="#reels-showcase" class="btn btn-secondary">Watch Generated Reels</a>
+          <a href="#short-films" class="btn btn-secondary">Try It Yourself</a>
         </div>
       </div>
     </section>
 
-    <!-- AI STUDIO (TEXT TO VIDEO / IMAGE TO VIDEO — NO PAYMENT DETAILS) -->
-    <section id="studio">
+    <!-- SECTION 1: REAL SHOWINGS — AI SHORT FILM ANIMATION (16:9) -->
+    <section id="film-showcase">
       <div class="container">
         <div class="section-head">
-          <h2>AI Video, Text-to-Video & Image-to-Video</h2>
-          <p>Build single-shot prompts or animate still images before attaching your brief to a package.</p>
+          <h2>AI Short Film Animation — Screening Room</h2>
+          <p>Widescreen 16:9 story-driven AI animations with consistent characters, lighting, and voiceover pacing. Upload your rendered <code>samples/*.mp4</code> files anytime to swap in full audio-video playback.</p>
         </div>
-        <div class="studio-card">
-          <div class="mode-bar">
-            <button type="button" class="mode-btn active" data-mode="text-to-video" onclick="setMode('text-to-video')">Text to Video</button>
-            <button type="button" class="mode-btn" data-mode="image-to-video" onclick="setMode('image-to-video')">Image to Video</button>
-            <button type="button" class="mode-btn" data-mode="restyle-motion" onclick="setMode('restyle-motion')">Motion & Style Restyle</button>
-          </div>
 
-          <div class="preset-strip">
-            <span style="font-size:0.78rem; color:var(--muted); align-self:center;">Quick prompts:</span>
-            <button type="button" class="preset-chip" onclick="applyPreset('Cinematic product showcase with smooth orbit camera, studio rim lighting, and clean bold captions.')">Product Ad</button>
-            <button type="button" class="preset-chip" onclick="applyPreset('Vertical 9:16 real estate walkthrough highlighting plot location, road access, and payment options.')">Real Estate Reel</button>
-          </div>
-
-          <div class="studio-grid">
+        <div class="film-showcase-grid">
+          <div class="media-card">
             <div>
-              <label class="field-label" id="promptLabel" for="promptInput">Text-to-Video Prompt & Scene Direction</label>
-              <textarea
-                id="promptInput"
-                placeholder="Describe your scene, camera movement, lighting, or voiceover script..."
-              ></textarea>
-
-              <div class="img-drop" id="imageInputBox" style="display:none;">
-                <label class="field-label" for="sourceImageFile" style="margin-bottom:6px;">Reference Image for Image-to-Video (JPG, PNG, WebP)</label>
-                <input type="file" id="sourceImageFile" accept="image/png,image/jpeg,image/webp" onchange="handleImageUpload(event)" />
-                <div class="img-preview-box" id="imgPreviewBox">
-                  <img id="imgPreviewThumb" alt="Uploaded reference image" />
-                  <div>
-                    <div id="imgFileName" style="font-size:0.88rem; font-weight:600;"></div>
-                    <div style="font-size:0.78rem; color:var(--muted);">Loaded for motion & camera animation</div>
-                  </div>
-                </div>
+              <div class="player-shell aspect-16-9">
+                <video
+                  class="real-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="samples/film-savannah.jpg"
+                  onerror="activateCanvasFallback(this, 'savannah')"
+                >
+                  <source src="samples/film-savannah.mp4" type="video/mp4" />
+                </video>
+                <canvas class="live-anim-canvas" data-scene="savannah" style="display:none;"></canvas>
               </div>
-
-              <div class="controls-row">
-                <div>
-                  <label class="field-label" for="modelSelect">Engine Preset</label>
-                  <select id="modelSelect">
-                    <option value="KasiMotion Pro">KasiMotion Pro (Cinematic)</option>
-                    <option value="KasiFlash Turbo">KasiFlash Turbo (Fast Drafts)</option>
-                    <option value="KasiAvatar Sync">KasiAvatar Sync (Presenter / Lip)</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="field-label" for="styleSelect">Visual Style</label>
-                  <select id="styleSelect">
-                    <option value="Studio Clean">Studio Clean</option>
-                    <option value="Cinematic">Cinematic</option>
-                    <option value="Social Reels">Social Reels</option>
-                    <option value="3D & Stylized">3D & Stylized</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label class="field-label" for="durationSelect">Duration</label>
-                  <select id="durationSelect">
-                    <option value="10s">10 seconds</option>
-                    <option value="15s" selected>15 seconds</option>
-                    <option value="30s (Multi-Shot)">30s (Multi-Shot)</option>
-                  </select>
-                </div>
+              <div class="media-meta-row" style="margin-top:10px;">
+                <span class="stage-tag">16:9 • 3D / PAINTERLY SHORT FILM</span>
+                <span>0:45 • 3 Acts</span>
               </div>
-
-              <div style="margin-bottom:14px;">
-                <span class="field-label">Aspect Ratio</span>
-                <div class="ratio-group" style="max-width:280px;">
-                  <button type="button" class="ratio-chip" data-ratio="9:16" onclick="setRatio('9:16', this)">9:16</button>
-                  <button type="button" class="ratio-chip active" data-ratio="16:9" onclick="setRatio('16:9', this)">16:9</button>
-                  <button type="button" class="ratio-chip" data-ratio="1:1" onclick="setRatio('1:1', this)">1:1</button>
-                </div>
-              </div>
-
-              <div class="hero-cta" style="justify-content:flex-start;">
-                <button type="button" class="btn btn-primary" onclick="generateStudioPreview()">Generate Video Plan</button>
-                <button type="button" class="btn btn-secondary" onclick="attachStudioPlanToPackage()">Attach Plan to Package</button>
-              </div>
+              <h3 style="font-size:1.1rem; margin-top:6px;">"Dawn Over Mara" — Animated Brand Story</h3>
+              <p style="font-size:0.88rem; color:var(--muted);">Consistent lead character across three golden-hour scenes with atmospheric score and narrative arc.</p>
             </div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('AI Short Film Animation: Dawn Over Mara (16:9, 45s)')">Order Similar Short Film</button>
+          </div>
 
-            <div class="stage-panel">
-              <div class="stage-frame" id="stageFrame">
-                <div>
-                  <span class="stage-tag" id="stageModeBadge">TEXT TO VIDEO</span>
-                  <div class="stage-title" id="stageTitle">Studio Canvas Ready</div>
-                </div>
-                <div class="stage-script" id="stageScript">Select a mode or quick prompt, set aspect ratio and style, then click "Generate Video Plan".</div>
-                <div class="stage-meta">
-                  <span id="stageRatio">Ratio: 16:9</span>
-                  <span id="stageEngine">KasiMotion Pro • Studio Clean • 15s</span>
-                </div>
+          <div class="media-card">
+            <div>
+              <div class="player-shell aspect-16-9">
+                <video
+                  class="real-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="samples/film-cyber-nairobi.jpg"
+                  onerror="activateCanvasFallback(this, 'nairobi2050')"
+                >
+                  <source src="samples/film-cyber-nairobi.mp4" type="video/mp4" />
+                </video>
+                <canvas class="live-anim-canvas" data-scene="nairobi2050" style="display:none;"></canvas>
               </div>
+              <div class="media-meta-row" style="margin-top:10px;">
+                <span class="stage-tag">16:9 • SCI-FI / STYLIZED ANIMATION</span>
+                <span>0:35 • Multi-Shot</span>
+              </div>
+              <h3 style="font-size:1.1rem; margin-top:6px;">"Nairobi Express 2050" — Stylized Short</h3>
+              <p style="font-size:0.88rem; color:var(--muted);">Smooth camera tracking, neon skyline reflections, and synchronized title overlays built for launch trailers.</p>
             </div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('AI Short Film Animation: Nairobi Express 2050 (16:9, 35s)')">Order Similar Short Film</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AI SHORT FILMS ("TRY IT"): STORY-DRIVEN FILMS + VIDEO BACKGROUND CHANGER -->
+    <!-- SECTION 2: REAL GENERATED SHORT REELS (9:16 VERTICAL) -->
+    <section id="reels-showcase">
+      <div class="container">
+        <div class="section-head">
+          <h2>Real Generated Short Reels (9:16)</h2>
+          <p>Vertical TikTok, Instagram Reels, and YouTube Shorts engineered with 3-second visual hooks and bold captions.</p>
+        </div>
+
+        <div class="reels-showcase-grid">
+          <div class="media-card">
+            <div>
+              <div class="player-shell aspect-9-16">
+                <video
+                  class="real-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="samples/reel-plot.jpg"
+                  onerror="activateCanvasFallback(this, 'reelPlot')"
+                >
+                  <source src="samples/reel-plot.mp4" type="video/mp4" />
+                </video>
+                <canvas class="live-anim-canvas" data-scene="reelPlot" style="display:none;"></canvas>
+              </div>
+              <div class="media-meta-row" style="margin-top:10px;">
+                <span class="stage-tag">9:16 REEL</span>
+                <span>0:22 • Real Estate</span>
+              </div>
+              <h3 style="font-size:1.05rem; margin-top:6px;">Juja 50x100 Plot Showcase Reel</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">Image-to-video aerial motion, title deed callout, and WhatsApp site-visit hook.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Real Estate 9:16 Showcase')">Use This Reel Format</button>
+          </div>
+
+          <div class="media-card">
+            <div>
+              <div class="player-shell aspect-9-16">
+                <video
+                  class="real-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="samples/reel-product.jpg"
+                  onerror="activateCanvasFallback(this, 'reelProduct')"
+                >
+                  <source src="samples/reel-product.mp4" type="video/mp4" />
+                </video>
+                <canvas class="live-anim-canvas" data-scene="reelProduct" style="display:none;"></canvas>
+              </div>
+              <div class="media-meta-row" style="margin-top:10px;">
+                <span class="stage-tag">9:16 REEL</span>
+                <span>0:18 • E-Commerce</span>
+              </div>
+              <h3 style="font-size:1.05rem; margin-top:6px;">Product Orbit & Price Drop Reel</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">Background-replaced product studio spin with dynamic KES price badge.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Product Orbit & Price Drop 9:16')">Use This Reel Format</button>
+          </div>
+
+          <div class="media-card">
+            <div>
+              <div class="player-shell aspect-9-16">
+                <video
+                  class="real-video"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  poster="samples/reel-clinic.jpg"
+                  onerror="activateCanvasFallback(this, 'reelClinic')"
+                >
+                  <source src="samples/reel-clinic.mp4" type="video/mp4" />
+                </video>
+                <canvas class="live-anim-canvas" data-scene="reelClinic" style="display:none;"></canvas>
+              </div>
+              <div class="media-meta-row" style="margin-top:10px;">
+                <span class="stage-tag">9:16 REEL</span>
+                <span>0:25 • Clinic & Beauty</span>
+              </div>
+              <h3 style="font-size:1.05rem; margin-top:6px;">Dental & Aesthetic Offer Reel</h3>
+              <p style="font-size:0.86rem; color:var(--muted);">Hook-led explainer with clean captions and instant appointment CTA.</p>
+            </div>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="orderFromShowcase('Generated Short Reel: Clinic & Beauty Offer 9:16')">Use This Reel Format</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRY IT STUDIO: STORY-DRIVEN FILMS + VIDEO BACKGROUND CHANGER -->
     <section id="short-films">
       <div class="container">
         <div class="section-head">
           <h2>AI Short Films — Try It (Story-Driven Films & Background Changer)</h2>
-          <p>Direct multi-scene story-driven short films with consistent characters/settings or test live video background replacement on your clip.</p>
+          <p>Direct multi-scene story-driven short films or test live video background replacement on your clip.</p>
         </div>
 
         <div class="film-grid">
-          <!-- LEFT: STORY-DRIVEN SHORT FILM BUILDER -->
+          <!-- STORY-DRIVEN SHORT FILM BUILDER -->
           <div class="studio-card">
             <span class="stage-tag" style="margin-bottom:10px;">STORY-DRIVEN SHORT FILMS</span>
             <h3 style="font-size:1.15rem; margin-bottom:8px;">Try Story-Driven Film Director</h3>
@@ -572,7 +673,7 @@
             <label class="field-label" for="filmPremise">Story Premise & Character Continuity</label>
             <textarea
               id="filmPremise"
-              placeholder="Example: Young entrepreneur in Nairobi launching a coffee & pastry spot—consistent character jacket, warm morning light, emotional turning point, and clear invitation..."
+              placeholder="Describe your character, setting, turning point, and ending call to action..."
             ></textarea>
 
             <div class="controls-row">
@@ -606,7 +707,7 @@
             </div>
           </div>
 
-          <!-- RIGHT: VIDEO BACKGROUND CHANGER ("TRY IT") -->
+          <!-- VIDEO BACKGROUND CHANGER -->
           <div class="studio-card">
             <span class="stage-tag" style="margin-bottom:10px;">VIDEO BACKGROUND CHANGER</span>
             <h3 style="font-size:1.15rem; margin-bottom:8px;">Try Video Background Replacement</h3>
@@ -653,12 +754,104 @@
       </div>
     </section>
 
-    <!-- PACKAGES SECTION (PAYMENT MODES: USDT, USDC & M-PESA ATTACHED HERE) -->
+    <!-- TEXT TO VIDEO / IMAGE TO VIDEO STUDIO -->
+    <section id="studio">
+      <div class="container">
+        <div class="section-head">
+          <h2>AI Video, Text-to-Video & Image-to-Video</h2>
+          <p>Build single-shot prompts or animate still images before attaching your brief to a package.</p>
+        </div>
+        <div class="studio-card">
+          <div class="mode-bar">
+            <button type="button" class="mode-btn active" data-mode="text-to-video" onclick="setMode('text-to-video')">Text to Video</button>
+            <button type="button" class="mode-btn" data-mode="image-to-video" onclick="setMode('image-to-video')">Image to Video</button>
+            <button type="button" class="mode-btn" data-mode="restyle-motion" onclick="setMode('restyle-motion')">Motion & Style Restyle</button>
+          </div>
+
+          <div class="studio-grid">
+            <div>
+              <label class="field-label" id="promptLabel" for="promptInput">Text-to-Video Prompt & Scene Direction</label>
+              <textarea id="promptInput" placeholder="Describe your scene, camera movement, lighting, or voiceover script..."></textarea>
+
+              <div class="img-drop" id="imageInputBox" style="display:none;">
+                <label class="field-label" for="sourceImageFile" style="margin-bottom:6px;">Reference Image for Image-to-Video (JPG, PNG, WebP)</label>
+                <input type="file" id="sourceImageFile" accept="image/png,image/jpeg,image/webp" onchange="handleImageUpload(event)" />
+                <div class="img-preview-box" id="imgPreviewBox">
+                  <img id="imgPreviewThumb" alt="Uploaded reference image" />
+                  <div>
+                    <div id="imgFileName" style="font-size:0.88rem; font-weight:600;"></div>
+                    <div style="font-size:0.78rem; color:var(--muted);">Loaded for motion & camera animation</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="controls-row">
+                <div>
+                  <label class="field-label" for="modelSelect">Engine Preset</label>
+                  <select id="modelSelect">
+                    <option value="KasiMotion Pro">KasiMotion Pro (Cinematic)</option>
+                    <option value="KasiFlash Turbo">KasiFlash Turbo (Fast Drafts)</option>
+                    <option value="KasiAvatar Sync">KasiAvatar Sync (Presenter / Lip)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="field-label" for="styleSelect">Visual Style</label>
+                  <select id="styleSelect">
+                    <option value="Studio Clean">Studio Clean</option>
+                    <option value="Cinematic">Cinematic</option>
+                    <option value="Social Reels">Social Reels</option>
+                    <option value="3D & Stylized">3D & Stylized</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="field-label" for="durationSelect">Duration</label>
+                  <select id="durationSelect">
+                    <option value="10s">10 seconds</option>
+                    <option value="15s" selected>15 seconds</option>
+                    <option value="30s (Multi-Shot)">30s (Multi-Shot)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div style="margin-bottom:14px;">
+                <span class="field-label">Aspect Ratio</span>
+                <div class="ratio-group" style="max-width:280px;">
+                  <button type="button" class="ratio-chip" data-ratio="9:16" onclick="setRatio('9:16', this)">9:16</button>
+                  <button type="button" class="ratio-chip active" data-ratio="16:9" onclick="setRatio('16:9', this)">16:9</button>
+                  <button type="button" class="ratio-chip" data-ratio="1:1" onclick="setRatio('1:1', this)">1:1</button>
+                </div>
+              </div>
+
+              <div class="hero-cta" style="justify-content:flex-start;">
+                <button type="button" class="btn btn-primary" onclick="generateStudioPreview()">Generate Video Plan</button>
+                <button type="button" class="btn btn-secondary" onclick="attachStudioPlanToPackage()">Attach Plan to Package</button>
+              </div>
+            </div>
+
+            <div class="stage-panel">
+              <div class="stage-frame" id="stageFrame">
+                <div>
+                  <span class="stage-tag" id="stageModeBadge">TEXT TO VIDEO</span>
+                  <div class="stage-title" id="stageTitle">Studio Canvas Ready</div>
+                </div>
+                <div class="stage-script" id="stageScript">Enter a prompt or upload an image, set aspect ratio and style, then click "Generate Video Plan".</div>
+                <div class="stage-meta">
+                  <span id="stageRatio">Ratio: 16:9</span>
+                  <span id="stageEngine">KasiMotion Pro • Studio Clean • 15s</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES SECTION (PAYMENT MODES: USDT, USDC & M-PESA ATTACHED EXCLUSIVELY HERE) -->
     <section id="packages">
       <div class="container">
         <div class="section-head">
           <h2>Packages & Payment Modes (USDT, USDC & M-PESA)</h2>
-          <p>Select a package to attach your short film or background swap brief and pay via <strong>USDT</strong>, <strong>USDC</strong>, or <strong>M-PESA</strong>.</p>
+          <p>Select a package to attach your short film, Reel, or background swap brief and pay via <strong>USDT</strong>, <strong>USDC</strong>, or <strong>M-PESA</strong>.</p>
         </div>
 
         <div class="pricing-grid">
@@ -667,7 +860,7 @@
               <h3>Starter Creator Pack</h3>
               <div class="pkg-price">KES 1,500 <span>/ ~12 USDT or USDC</span></div>
               <ul class="pkg-list">
-                <li>• 3 AI-assisted short videos or BG swaps</li>
+                <li>• 3 AI-assisted short reels or BG swaps</li>
                 <li>• Text-to-video or image-to-video cuts</li>
                 <li>• Captions & export ready</li>
               </ul>
@@ -683,7 +876,7 @@
               <h3>Growth Studio Pack</h3>
               <div class="pkg-price">KES 2,500 <span>/ ~20 USDT or USDC</span></div>
               <ul class="pkg-list">
-                <li>• 5 story clips, motion shots, or BG changes</li>
+                <li>• 5 story reels, animation shots, or BG changes</li>
                 <li>• Multi-ratio exports (9:16, 16:9, 1:1)</li>
                 <li>• Storyboard scripts & priority delivery</li>
               </ul>
@@ -699,7 +892,7 @@
               <h3>Monthly Studio Retainer</h3>
               <div class="pkg-price">KES 22,000 <span>/ ~170 USDT or USDC / mo</span></div>
               <ul class="pkg-list">
-                <li>• 24 AI short films & storyboard assets/month</li>
+                <li>• 24 AI short films, reels & storyboards/month</li>
                 <li>• Ongoing story direction & background swaps</li>
                 <li>• Dedicated production queue</li>
               </ul>
@@ -751,7 +944,7 @@
       <input type="text" id="orderClientName" placeholder="Enter your name or business" style="margin-bottom:10px;" />
 
       <label class="field-label" for="orderBrief">Attached Studio Brief</label>
-      <textarea id="orderBrief" style="min-height:78px; margin-bottom:12px;" placeholder="Your short film, background swap, or video brief..."></textarea>
+      <textarea id="orderBrief" style="min-height:78px; margin-bottom:12px;" placeholder="Your short film, Reel, background swap, or video brief..."></textarea>
 
       <button type="button" class="btn btn-primary" style="width:100%;" onclick="confirmPackageOrder()">Confirm & Send on WhatsApp (+254 704 770 170)</button>
     </div>
@@ -772,6 +965,96 @@
       "TRC20 (Tron)": "TYoursTronWalletAddressHere"
     };
 
+    /* LIVE ANIMATED CANVAS FALLBACKS WHEN samples/*.mp4 ARE NOT YET UPLOADED */
+    const activeCanvases = [];
+    document.querySelectorAll(".real-video").forEach((vid) => {
+      const src = vid.querySelector("source");
+      if (src) {
+        src.addEventListener("error", () => {
+          const canvas = vid.parentElement.querySelector(".live-anim-canvas");
+          activateCanvasFallback(vid, canvas ? canvas.dataset.scene : "savannah");
+        });
+      }
+    });
+
+    function activateCanvasFallback(videoEl, sceneKey) {
+      if (!videoEl || !videoEl.parentElement) return;
+      videoEl.style.display = "none";
+      const canvas = videoEl.parentElement.querySelector(".live-anim-canvas");
+      if (!canvas) return;
+      canvas.style.display = "block";
+      if (!activeCanvases.some((item) => item.canvas === canvas)) {
+        activeCanvases.push({ canvas, scene: sceneKey || "savannah" });
+      }
+    }
+
+    const sceneConfigs = {
+      savannah: { c1: "#92400e", c2: "#0f172a", tag: "AI SHORT FILM • ACT II", line1: "Dawn Over Mara", line2: "Golden hour character tracking shot" },
+      nairobi2050: { c1: "#4c1d95", c2: "#090d16", tag: "STYLIZED ANIMATION", line1: "Nairobi Express 2050", line2: "Neon skyline orbit • 24fps motion" },
+      reelPlot: { c1: "#065f46", c2: "#090d16", tag: "9:16 REEL • HOOK", line1: "Juja 50x100 Plots", line2: "Ready Title Deeds • KES 650K" },
+      reelProduct: { c1: "#78350f", c2: "#0b0f19", tag: "9:16 PRODUCT SPIN", line1: "Studio Showcase", line2: "Clean BG Swap + Price Badge" },
+      reelClinic: { c1: "#1e3a8a", c2: "#090d16", tag: "9:16 CLINIC REEL", line1: "Smile Makeover", line2: "Book Today on WhatsApp" }
+    };
+
+    function renderAnimatedFrames(now) {
+      const t = now * 0.001;
+      activeCanvases.forEach(({ canvas, scene }) => {
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width === 0 || rect.height === 0) return;
+        if (canvas.width !== Math.floor(rect.width) || canvas.height !== Math.floor(rect.height)) {
+          canvas.width = Math.floor(rect.width);
+          canvas.height = Math.floor(rect.height);
+        }
+        const ctx = canvas.getContext("2d");
+        const w = canvas.width;
+        const h = canvas.height;
+        const cfg = sceneConfigs[scene] || sceneConfigs.savannah;
+
+        const grad = ctx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, cfg.c1);
+        grad.addColorStop(1, cfg.c2);
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, w, h);
+
+        // Moving light orbs simulating camera motion
+        for (let i = 0; i < 4; i++) {
+          const x = w * (0.2 + 0.2 * i) + Math.sin(t * 1.1 + i) * 26;
+          const y = h * 0.42 + Math.cos(t * 0.9 + i * 1.5) * 22;
+          const r = Math.min(w, h) * (0.14 + 0.03 * Math.sin(t + i));
+          ctx.beginPath();
+          ctx.fillStyle = "rgba(255,255,255,0.08)";
+          ctx.arc(x, y, r, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        // Top badge
+        ctx.fillStyle = "rgba(16, 185, 129, 0.22)";
+        ctx.fillRect(14, 14, Math.min(w - 28, 175), 22);
+        ctx.fillStyle = "#6ee7b7";
+        ctx.font = "bold 11px system-ui, sans-serif";
+        ctx.fillText(cfg.tag, 22, 29);
+
+        // Animated caption card
+        const pulse = Math.sin(t * 2) * 3;
+        ctx.fillStyle = "rgba(9, 11, 16, 0.76)";
+        ctx.fillRect(14, h - 76 + pulse, w - 28, 60);
+        ctx.fillStyle = "#f8fafc";
+        ctx.font = "bold 15px system-ui, sans-serif";
+        ctx.fillText(cfg.line1, 24, h - 50 + pulse);
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "12px system-ui, sans-serif";
+        ctx.fillText(cfg.line2, 24, h - 30 + pulse);
+      });
+      requestAnimationFrame(renderAnimatedFrames);
+    }
+    requestAnimationFrame(renderAnimatedFrames);
+
+    function orderFromShowcase(label) {
+      document.getElementById("orderBrief").value = label;
+      openPackageCheckout("Growth Studio Pack (KES 2,500 / ~20 USDT-USDC)", "20");
+    }
+
+    /* TEXT / IMAGE TO VIDEO STUDIO */
     let currentMode = "text-to-video";
     let currentRatio = "16:9";
     let uploadedImageName = "";
@@ -780,7 +1063,6 @@
     let approxStable = "20";
     let paymentMode = "USDT";
 
-    /* TEXT / IMAGE TO VIDEO STUDIO */
     function setMode(mode) {
       currentMode = mode;
       document.querySelectorAll(".mode-btn").forEach((btn) => {
@@ -803,11 +1085,6 @@
         imgBox.style.display = "none";
         badge.textContent = "TEXT TO VIDEO";
       }
-    }
-
-    function applyPreset(text) {
-      document.getElementById("promptInput").value = text;
-      generateStudioPreview();
     }
 
     function setRatio(ratio, btn) {
@@ -948,7 +1225,7 @@
       openPackageCheckout(selectedPackage, approxStable);
     }
 
-    /* PACKAGES & PAYMENT MODAL (USDT, USDC & M-PESA) */
+    /* PACKAGES & PAYMENT MODAL */
     function openPackageCheckout(pkgName, stableAmount) {
       selectedPackage = pkgName;
       approxStable = stableAmount || "20";
